@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "create-migrate": "prisma migrate dev",
+    "generate-seed": "prisma db seed"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
   "devDependencies": {
     "@mermaid-js/mermaid-cli": "^9.1.7",
     "prisma": "^4.5.0",
@@ -19,6 +24,8 @@
   "dependencies": {
     "@fastify/cors": "^8.1.1",
     "@prisma/client": "^4.5.0",
-    "fastify": "^4.9.2"
+    "fastify": "^4.9.2",
+    "short-unique-id": "^4.4.4",
+    "zod": "^3.19.1"
   }
 }
